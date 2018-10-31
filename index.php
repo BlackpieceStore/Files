@@ -62,21 +62,6 @@ Tweets por @BlackpieceStore
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </div> 
 
-
-         <!--
-        <div ng-controller="nomesShow" >
-
-        <ul id="gallery">
-          <li ng-repeat='artista in nomes'>
-            <a href={{artista.pagina}}>
-              <img src={{artista.img}}>
-              <p>{{artista.nome}}<p>
-              <p>{{artista.data}}</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    -->
 <?php include("inc/footer.php");?>
 
     
