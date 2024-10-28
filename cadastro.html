@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login > Cadastro - Blackpiece Info</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="icon" href="img/blackpiece minilogo.png" type="image/png">
+    <style>
+        body {
+            background-image: url('');
+            background-size: cover;
+            color: white;
+            font-family: Fantasy;
+        }
+        .login-container {
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            color: black;
+            border-radius: 4px;
+        }
+        .login-container h2 {
+            text-align: center;
+        }
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container form input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .login-container form button {
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            color: white;
+            background-color: #008CBA;
+        }
+        /* Inserir o código CSS do menu aqui */
+
+
+
+          body {
+              background-color: black;
+              color: white;
+              font-family: Fantasy;
+          }
+          img.logo {
+              width: 15%;   /* você pode ajustar isso conforme necessário */
+              height: auto; /* mantém a proporção da imagem */
+          }
+
+          .slide-container {
+              max-width: 400px;
+              position: relative;
+              margin: auto;
+          }
+
+          .slide {
+              display: none;
+              width: 100%;
+              height: 300px;
+          }
+
+          .active-slide {
+              display: block;
+          }
+
+          .slide img {
+              width: 100%;
+              height: 100%;
+          }
+
+           .slide-selector {
+              text-align: center;
+              padding: 10px;
+          }
+
+
+          .slide-selector .btn {
+              border-radius: 50%;
+              width: 15px;
+              height: 15px;
+              padding: 0;
+              margin: 0 2px;
+              line-height: 15px;
+              background-color: #fff;
+              border: none;
+          }
+          .slide-selector .btn.selected {
+              background-color: black;
+              border: 1px solid white;
+          }
+
+
+          .buy-button {
+              display: none;
+              position: absolute;
+              bottom: 35px;
+              left: 50%;
+              transform: translateX(-50%);
+              padding: 10px 20px;
+              background-color: #008CBA; /* Blue */
+              color: white;
+              border: none;
+              cursor: pointer;
+              text-align: center;
+              text-decoration: none;
+              font-size: 14px;
+          }
+
+          .active-slide .buy-button {
+              display: block;
+          }
+
+          .product-container {
+              display: flex;
+              justify-content: space-around;
+              padding: 10px 20px;
+              flex-wrap: wrap;
+            margin-bottom: 40px;
+          }
+
+          .product {
+              text-align: center;
+              flex: 0 0 33.33%;
+              max-width: 33.33%;
+              box-sizing: border-box;
+              padding: 40px;
+          }
+        .navbar-nav a {
+
+            display: block;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav a::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 2px;
+            width: 0;
+            background: white;
+            transition: width 0.3s;
+        }
+
+        .navbar-nav a:hover {
+            color: white;
+        }
+
+        .navbar-nav a:hover::after {
+            width: 100%;
+        }
+
+        .navbar-light {
+            background-color: black !important;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .nav-item.active a {
+            color: white;
+        }
+        .nav-item.active a::after {
+            width: 100%;
+        }
+
+        .content {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Inserir o código HTML do menu aqui -->
+
+  <body onload="window.scrollTo(0, 0);">
+    <a href="index.html">
+     <img class="logo" src="img/blackpiecelogo.jpg" 
+       alt="Blackpiece Logo"  href="produtos.html">
+      </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hardware.html">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" 
+   href="login.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
+    <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+  </svg> Login </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="login-container">
+        <h2>Cadastrar novo usuário</h2>
+        <form action="/cadastro" method="post">
+            <input type="text" placeholder="Email" name="username" required>    
+            <input type="text" placeholder="Nome" name="username" required>
+            <input type="text" placeholder="Sobrenome" name="lastusername" required>
+            <input type="password" placeholder="Senha" name="password" required>
+            <input type="text" placeholder="Repita a senha" name="password" required>
+            
+           <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <footer style="background-color: black; text-align: center; padding: 5px; position: fixed; left: 0; bottom: 0; width: 100%;">
+        <p>&copy;2019-2024 Blackpiece Info. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
