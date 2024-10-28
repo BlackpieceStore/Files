@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackpiece Info</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="icon" href="img/blackpiece-logo.jpg" type="image/jpg">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-light {
+            background-color: #000000 !important;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #ffffff !important;
+            margin-right: 15px;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #e0e0e0 !important;
+        }
+
+        .navbar-nav a {
+            display: block;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav a::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 2px;
+            width: 0;
+            background: #ffffff;
+            transition: width 0.3s;
+        }
+
+        .navbar-nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-item.active a::after {
+            width: 100%;
+        }
+
+        .navbar-brand img {
+            width: 280px;
+        }
+
+        .music-player {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: #ffffff;
+        }
+
+        .music-player audio {
+            margin-bottom: 5px;
+        }
+
+        .music-title {
+            color: #ffffff;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .hero {
+            background: url('img/pexels-liza-summer-6347720.jpg') center center/cover no-repeat;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 0 15px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 50px;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #333333;
+        }
+
+        .products-section {
+            padding: 60px 0;
+        }
+
+        .product-card {
+            background-color: #f5f5f5;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background-color: #000000;
+            padding: 20px 0;
+            text-align: center;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .footer-logos img {
+            max-width: 80px;
+            margin: 0 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .footer-logos img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/blackpiecelogo.jpg" alt="Blackpiece Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hardware.html">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                            <path fill-rule="evenodd"
+                                d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                        </svg>
+                        Login
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <div class="music-player">
+                        <audio id="audioPlayer" autoplay controls>
+                            <source id="audioSource" src="audio/music1.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <div class="music-title">
+                            <span id="musicName">Música 1</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Bem-vindo à Blackpiece Info</h1>
+            <p>Seu parceiro em soluções tecnológicas de ponta</p>
+            <a href="hardware.html" class="btn btn-primary">Conheça nossos produtos</a>
+        </div>
+    </header>
+
+    <section class="products-section container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <img src="Screenshot_20240822-141514~2.png" alt="Computadores">
+                    <h2>Computadores</h2>
+                    <p>Explore nossa linha de computadores de alta performance.</p>
+                    <a href="hardware.html" class="btn btn-primary">Ver mais</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <img src="img/Monitor LG Ultragear 34 Pol WQHD.png" alt="Componentes">
+                    <h2>Componentes</h2>
+                    <p>Encontre os melhores componentes para o seu setup.</p>
+                    <a href="hardware.html" class="btn btn-primary">Ver mais</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <img src="img/Hardware.png" alt="Placas de Vídeo">
+                    <h2>Placas de Vídeo</h2>
+                    <p>Potencialize sua máquina com as melhores GPUs.</p>
+                    <a href="hardware.html" class="btn btn-primary">Ver mais</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <img src="img/550xed-kt38.jpg" alt="Componentes">
+                    <h2>Notebooks</h2>
+                    <p>Encontre os melhores Notebooks para o seu setup.</p>
+                    <a href="hardware.html" class="btn btn-primary">Ver mais</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <img src="img/urgente-sony-confirma-lancamento-do-playstation-5-pro-saiba-quando.jpg" alt="Componentes">
+                    <h2>Video Games</h2>
+                    <p>Encontre os melhores componentes para o seu setup.</p>
+                    <a href="hardware.html" class="btn btn-primary">Ver mais</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <img src="img/iphone-16-cores-edited.webp" alt="Componentes">
+                    <h2>Celulares</h2>
+                    <p>Encontre os melhores componentes para o seu setup.</p>
+                    <a href="hardware.html" class="btn btn-primary">Ver mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logos mb-4">
+                <img src="img/pngwing.com.Apple.png" alt="Apple Logo">
+                <img src="img/pngwing.com.Microsoft.png" alt="Microsoft Logo">
+                <img src="img/pngwing.com.PlaystationAzul.png" alt="Playstation Logo">
+                <img src="img/pngwing.com.Nvidia.png" alt="NVIDIA Logo">
+                <img src="img/pngwing.com.Intel.png" alt="Intel Logo">
+                <img src="img/pngwing.com.Samsung.png" alt="Samsung Logo">
+                <img src="img/pngwing.com.Dell.png" alt="Dell Logo">
+                <img src="img/pngwing.com.LG.png" alt="LG Logo">
+            </div>
+            <p>&copy; 2019-2024 Blackpiece Info. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Lista de músicas
+        const musicList = [
+            { name: "Same Dream (Radio Edit)", file: "audio/Same Dream (Radio Edit).mp3" },
+        ];
+
+        // Elementos
+        const audioPlayer = document.getElementById('audioPlayer');
+        const musicNameDisplay = document.getElementById('musicName');
+        let currentTrack = 0;
+
+        // Função para carregar música
+        function loadMusic(trackIndex) {
+            audioPlayer.src = musicList[trackIndex].file;
+            musicNameDisplay.textContent = musicList[trackIndex].name;
+            audioPlayer.play(); // Toca automaticamente
+        }
+
+        // Quando uma música termina, passa para a próxima
+        audioPlayer.addEventListener('ended', () => {
+            currentTrack = (currentTrack + 1) % musicList.length;
+            loadMusic(currentTrack);
+        });
+
+        // Carrega a primeira música quando a página abre
+        window.onload = () => {
+            loadMusic(currentTrack);
+        };
+    </script>
+</body>
+
+</html>
