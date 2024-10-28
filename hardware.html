@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackpiece Info - Produtos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="icon" href="img/blackpiece minilogo.png" type="image/png">
+
+    <style>
+        body {
+            background-color: #ffffff; /* Fundo branco */
+            color: #333333; /* Texto cinza escuro */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        img.logo {
+            width: 15%;
+            height: auto;
+        }
+
+        .slide-container {
+            max-width: 600px;
+            position: relative;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 300px;
+        }
+
+        .active-slide {
+            display: block;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .slide-selector {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .slide-selector .btn {
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            padding: 0;
+            margin: 0 2px;
+            line-height: 15px;
+            background-color: #000000; /* Preto */
+            border: none;
+        }
+
+        .slide-selector .btn.selected {
+            background-color: #ffffff; /* Branco */
+            border: 1px solid #000000; /* Borda preta */
+        }
+
+        .buy-button {
+            display: none;
+            position: absolute;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #000000; /* Preto */
+            color: #ffffff; /* Branco */
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .active-slide .buy-button {
+            display: block;
+        }
+
+        .navbar {
+            background-color: #000000 !important; /* Preto */
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important; /* Branco */
+            margin-left: 1rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #999999 !important; /* Cinza claro */
+        }
+
+        .navbar-nav .nav-item.active .nav-link {
+            color: #ffffff !important; /* Branco */
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ffffff; /* Branco */
+            transition: width 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .products-section {
+            padding: 40px 0;
+            background-color: #f8f9fa;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            height: 200px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .product-card h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body onload="window.scrollTo(0, 0);">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img class="logo" src="img/blackpiecelogo.jpg" alt="Blackpiece Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="hardware.html">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
+                            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                        </svg> Login </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="slide-container">
+        <div class="slide active-slide">
+            <img src="img/Gabinete Galax branco.png" alt="Gabinetes">
+            <button class="buy-button">Ver mais</button>
+        </div>
+        <div class="slide">
+            <img src="img/Monitor LG Ultragear 34 Pol WQHD.png" alt="Monitores">
+            <button class="buy-button">Ver mais</button>
+        </div>
+        <div class="slide">
+            <img src="img/Hardware.png" alt="Hardwares">
+            <button class="buy-button">Ver mais</button>
+        </div>
+        <div class="slide">
+            <img src="img/Bateria Elgin CR2032 para BIOS.png" alt="Baterias CR2032">
+            <button class="buy-button">Ver mais</button>
+        </div>
+        <div class="slide">
+            <img src="img/Mouse Multi MF100.png" alt="Mouse">
+            <button class="buy-button">Ver mais</button>
+        </div>
+        <div class="slide-selector">
+            <button class="btn selected" onclick="selectSlide(0)"></button>
+            <button class="btn" onclick="selectSlide(1)"></button>
+            <button class="btn" onclick="selectSlide(2)"></button>
+            <button class="btn" onclick="selectSlide(3)"></button>
+                        <button class="btn" onclick="selectSlide(4)"></button>
+                    </div>
+                </div>
+
+                <section class="products-section container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="product-card">
+                                <img src="img/Gabinete Galax branco.png" alt="Gabinetes">
+                                <div class="card-body">
+                                    <h2>Gabinetes</h2>
+                                    <p>Confira nossa showcase de Gabinetes disponíveis para você e sua empresa</p>
+                                    <a href="hardware.html" class="btn btn-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-card">
+                                <img src="img/Monitor LG Ultragear 34 Pol WQHD.png" alt="Monitores">
+                                <div class="card-body">
+                                    <h2>Monitores</h2>
+                                    <p>Confira nossa showcase de Monitores disponíveis para você e sua empresa</p>
+                                    <a href="hardware.html" class="btn btn-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-card">
+                                <img src="img/Hardware.png" alt="Hardwares">
+                                <div class="card-body">
+                                    <h2>Hardwares</h2>
+                                    <p>Confira nossa showcase de Hardwares disponíveis para você e sua empresa</p>
+                                    <a href="hardware.html" class="btn btn-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-card">
+                                <img src="img/Bateria Elgin CR2032 para BIOS.png" alt="Baterias CR2032">
+                                <div class="card-body">
+                                    <h2>Baterias CR2032</h2>
+                                    <p>Confira nossa showcase de Baterias CR2032 disponíveis para você e sua empresa</p>
+                                    <a href="hardware.html" class="btn btn-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-card">
+                                <img src="img/Mouse Multi MF100.png" alt="Mouse">
+                                <div class="card-body">
+                                    <h2>Mouses</h2>
+                                    <p>Confira nossa showcase de Mouses disponíveis para você e sua empresa</p>
+                                    <a href="hardware.html" class="btn btn-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="footer">
+                    <p>&copy; 2024 Blackpiece Info. Todos os direitos reservados.</p>
+                </footer>
+
+                <script>
+                    let currentSlide = 0;
+                    const slides = document.querySelectorAll(".slide");
+                    const buttons = document.querySelectorAll(".slide-selector .btn");
+
+                    function selectSlide(index) {
+                        slides[currentSlide].classList.remove("active-slide");
+                        buttons[currentSlide].classList.remove("selected");
+
+                        currentSlide = index;
+
+                        slides[currentSlide].classList.add("active-slide");
+                        buttons[currentSlide].classList.add("selected");
+                    }
+
+                    setInterval(() => {
+                        selectSlide((currentSlide + 1) % slides.length);
+                    }, 3000);
+                </script>
+
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            </body>
+
+            </html>
+
